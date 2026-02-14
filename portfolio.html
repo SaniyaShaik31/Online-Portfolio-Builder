@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Portfolio Builder</title>
+
+<script type="text/javascript" src="portfolio.js" defer></script>
+
+<style>
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  color: #333;
+}
+
+.page {
+  display: none;
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+  background-image: url("");
+  background-size: cover;
+}
+
+#landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #764ba2, #667eea);
+  color: white;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color:hsla(120, 3%, 6%, 0.6);
+  color: aliceblue;
+}
+
+button {
+  padding: 10px 20px;
+  background: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: #5a61d1;
+}
+
+.profile-pic {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+p,h1{
+  color: aliceblue;
+}
+
+ul {
+  padding-left: 20px;
+  color: aliceblue;
+}
+
+textarea {
+  resize: vertical;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Landing Page -->
+<div id="landing">
+
+<h1>Welcome to Portfolio Builder</h1>
+
+<button onclick="showPage('form')">
+Create Portfolio
+</button>
+
+</div>
+
+
+<!-- Form Page -->
+<div id="form" class="page">
+
+<h2>Fill in Your Portfolio Details</h2>
+
+<input type="file" id="photo" accept="image/*">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<textarea id="about" rows="3" placeholder="About You"></textarea>
+
+<textarea id="experience" rows="3" placeholder="Experience"></textarea>
+
+<textarea id="skills" rows="2" placeholder="Skills (comma-separated)"></textarea>
+
+<textarea id="projects" rows="2" placeholder="Projects (comma-separated)"></textarea>
+
+<button onclick="generatePortfolio()">
+Generate Portfolio
+</button>
+
+</div>
+
+
+<!-- Preview Page -->
+<div id="preview" class="page">
+
+<img id="previewPhoto" class="profile-pic" src="#" alt ="profile Photo">
+
+<h1 id="previewName"></h1>
+
+
+<div class="section">
+<h2>About</h2>
+<p id="previewAbout"></p>
+</div>
+
+
+<div class="section">
+<h2>Experience</h2>
+<p id="previewExperience"></p>
+</div>
+
+
+<div class="section">
+<h2>Skills</h2>
+<ul id="previewSkills"></ul>
+</div>
+
+
+<div class="section">
+<h2>Projects</h2>
+<ul id="previewProjects"></ul>
+</div>
+
+
+<button onclick="showPage('form')">
+← Edit Info
+</button>
+
+<button onclick="location.href='homepage.html'">
+Sign In
+</button>
+
+</div>
+
+</body>
+</html>

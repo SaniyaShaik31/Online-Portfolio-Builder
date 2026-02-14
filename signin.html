@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign In - Portfolio Builder</title>
+  <style>
+    *{
+  margin: 0;
+  padding: 2%;
+}
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background:url( https://images.freecreatives.com/wp-content/uploads/2015/03/Huge-Backgrounds-63.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.container {
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 5px solid black;
+  width: 300px;
+  background-color: aliceblue;
+}
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 1%;
+  /* text-decoration: dashed; */
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* background-color:hsla(126, 17%, 22%, 0.6); */
+}
+
+
+label {
+  margin-bottom: 0.25%;
+}
+
+
+input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+button {
+  padding: 10px;
+  background: rgb(0, 68, 255);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+p {
+  text-align: center;
+  margin-top: 1px;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sign up</h1>
+    <form class = signin>
+      <label for="email">Email:</label>
+      <input type="email" placeholder="Enter your Email " required >
+      <label for="password">Password:</label>
+      <input type="password" placeholder="Enter your password" required >
+      <button type="submit"> <a href="home.html">sign up</a> </button>
+    </form>  
+      <p>Don't have an account?</p>
+  </div>
+</body>
+</html>
+
+
